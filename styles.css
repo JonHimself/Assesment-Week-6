@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+#start-game {
+  color: white;
+  font-size: 14px;
+  background-color: rgb(41, 41, 41);
+  height: 35px;
+  width: 80px;
+}
+
+#start-game:hover {
+  background-color: rgb(109, 109, 109);
+}
+
+#landing {
+  margin-top: 50%;
+  margin-bottom: 10%;
+  font-size: 200px;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+}
+.square {
+  color: white;
+  border: solid 1px rgb(255, 255, 255);
+  margin-bottom: 15%;
+  height: 50vh;
+  width: 50vw;
+}
+
+.square td {
+  color: white;
+  border: solid 1px rgb(255, 255, 255);
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  font-size: 45px;
+}
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    animation: wipe-enter 1s 1;
+  }
+}
+
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 10ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  margin-bottom: 25%;
+}
